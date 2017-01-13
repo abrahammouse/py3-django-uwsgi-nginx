@@ -1,9 +1,9 @@
 FROM ubuntu:14.04
 MAINTAINER Abrahammouse <abrahammouse@gmail.com>
-RUN apt-get update \
- && apt-get install -y \
- && git python3 python3-dev python3-setuptools \
- && nginx sqlite3 supervisor
+RUN apt-get update && \
+  apt-get install -y \
+  git python3 python3-dev python3-setuptools \
+  nginx sqlite3 supervisor
 RUN easy_install3 pip
 RUN pip install uwsgi
 
